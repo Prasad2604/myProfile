@@ -1,29 +1,33 @@
-<div class="bg-white flex flex-row p-3 rounded-[10px] items-center gap-4 w-full lg:w-[485px] transition-all duration-500 
-         hover:shadow-[0_0_0_5px_rgba(210,210,210,1)]">
+<div
+  class="bg-white flex flex-row p-3 rounded-[10px] items-center gap-4 w-full lg:w-[485px] transition-all duration-500 hover:shadow-[0_0_0_5px_rgba(210,210,210,1)] cursor-pointer"
+  (click)="openDetails()"
+>
+  <!-- Left circle -->
+  <div
+    class="lg:w-14 lg:h-14 h-11 w-11 flex items-center justify-center rounded-full bg-[linear-gradient(to_bottom,#eaeaea80,#f6f6f680,#eaeaea80)] border border-[#E0E0E0] shrink-0"
+  >
+    <img [src]="logo" class="lg:w-9 lg:h-9 w-6 h-6" />
+  </div>
 
-    <!-- Left circle -->
-    <div class="lg:w-14 lg:h-14 h-11 w-11 flex items-center justify-center rounded-full 
-              bg-[linear-gradient(to_bottom,#eaeaea80,#f6f6f680,#eaeaea80)]
-              border border-[#E0E0E0] shrink-0">
-        <img [src]="logo" class="lg:w-9 lg:h-9 w-6 h-6" />
-    </div>
+  <!-- Middle text -->
+  <div class="flex flex-col w-full gap-1">
+    <h1 class="text-lg font-medium leading-tight">{{ title }}</h1>
+    <h1 class="text-sm lg:text-lg font-normal text-[#5B5B5B] leading-tight">
+      {{ stack }}
+    </h1>
+  </div>
 
-    <!-- Middle text -->
-    <div class="flex flex-col w-full gap-1">
-        <h1 class="text-lg font-medium leading-tight">{{ title }}</h1>
-        <h1 class="text-sm lg:text-lg font-normal text-[#5B5B5B] leading-tight">
-            {{ stack }}
-        </h1>
-    </div>
-
-    <!-- Arrow -->
-    <div class="shrink-0">
-        <a [href]="link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                class="lg:size-6 size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-        </a>
-    </div>
-
+  <!-- Arrow icon ONLY for UI (no link needed) -->
+  <div class="shrink-0">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="lg:size-6 size-4"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+    </svg>
+  </div>
 </div>

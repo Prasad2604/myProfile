@@ -1,0 +1,54 @@
+<!-- Full Wrapper -->
+<div class="flex flex-col items-center w-full bg-[#F5F5F5] min-h-screen pb-10">
+  <!-- Main Content Card -->
+  <div class="bg-white rounded-[12px] shadow-sm w-full max-w-xl mt-6 p-6 flex flex-col gap-6">
+    <!-- Header Row -->
+    <div class="flex justify-between items-start">
+      <!-- Logo -->
+      <div
+        class="lg:w-14 lg:h-14 h-11 w-11 flex items-center justify-center rounded-full bg-[linear-gradient(to_bottom,#eaeaea80,#f6f6f680,#eaeaea80)] border border-[#E0E0E0] shrink-0"
+      >
+        <img [src]="detail.logo" class="w-14 h-14 rounded-lg" />
+      </div>
+
+      <!-- Duration (Experience) OR nothing for Projects -->
+      <p *ngIf="type === 'experience'" class="text-gray-500 text-sm">
+        {{ detail.period }}
+      </p>
+
+      <p *ngIf="type === 'project'" class="text-gray-500 text-sm">
+        {{ detail.tech.join(', ') }}
+      </p>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-semibold">
+      {{ detail.title || detail.role }}
+    </h1>
+
+    <!-- Bullet Points -->
+    <ul class="list-disc pl-6 flex flex-col gap-2 text-[15px] text-[#5B5B5B]">
+      <li *ngFor="let p of detail.points">
+        {{ p }}
+      </li>
+    </ul>
+
+    <!-- Visit website button -->
+    <button
+      *ngIf="detail.link"
+      (click)="open(detail.link)"
+      class="flex items-center gap-2 bg-[#2f2f2f] text-white px-4 py-2 rounded-lg w-fit transition-all duration-300 hover:opacity-90"
+    >
+      Visit website →
+    </button>
+
+    <!-- Divider -->
+    <hr class="border-gray-300" />
+
+    <!-- Connect Section -->
+    <app-connect></app-connect>
+
+    <!-- Follow Me Section -->
+    <app-follow-block></app-follow-block>
+  </div>
+</div>

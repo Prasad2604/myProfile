@@ -4,6 +4,7 @@ import { EmailButton } from '../email-button/email-button';
 
 @Component({
   selector: 'app-connect',
+  standalone: true,
   imports: [Button, EmailButton],
   templateUrl: './connect.html',
   styleUrl: './connect.css',
