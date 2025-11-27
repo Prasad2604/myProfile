@@ -10,7 +10,7 @@ export const PORTFOLIO_DATA = {
     isAvailable: true,
     summary: "I’m a software engineer based in Pune, India, with experience in Frontend Development and NLP. I am pursuing Computer Engineering at Pune Institute of Computer Technology.",
     profileImage: "../../assets/icons/prasad_img.jpg",
-    memojiImage:"../../assets/icons/prasad_img.jpg"
+    memojiImage:"../../assets/icons/memoji.png"
   },
 
   education: [

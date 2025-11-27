@@ -7,10 +7,25 @@
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
 
-body {
-    font-family: 'Inter', sans-serif;
-}
 
 @theme {
     --font-weight-extramedium: 550;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+    --bg: #F0F0F0;
+    --text: #111111;
+}
+
+.dark {
+    --bg: #111111;
+    --text: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
 }

@@ -1,5 +1,5 @@
 <!-- Full Wrapper -->
-<div class="flex flex-col gap-8 w-full bg-white rounded-[10px] py-6 px-8 shadow-[0px_4px_10px_-2px_rgba(0,0,0,0.1)] mb-4">
+<div class="flex flex-col gap-8 w-full bg-white dark:bg-[#161616] dark:ring dark:ring-[#282828] rounded-[10px] py-6 px-8 shadow-[0px_4px_10px_-2px_rgba(0,0,0,0.1)] mb-4">
   <!-- Main Content Card -->
    <div class="flex flex-col gap-5 px-2">
     <!-- Header Row -->
@@ -11,11 +11,11 @@
       </div>
     
       <!-- Duration (Experience) OR nothing for Projects -->
-      <p *ngIf="type === 'experience'" class="text-[#5B5B5B] text-sm">
+      <p *ngIf="type === 'experience'" class="text-[#828282] text-sm">
         {{ detail.period }}
       </p>
     
-      <p *ngIf="type === 'project'" class="text-[#5B5B5B] text-sm">
+      <p *ngIf="type === 'project'" class="text-[#828282] text-sm">
         {{ detail.tech.join(', ') }}
       </p>
     </div>
@@ -26,7 +26,7 @@
       </h1>
     
       <!-- Bullet Points -->
-      <ul class="list-disc flex flex-col pl-5 gap-2 text-sm sm:text-base text-[#5B5B5B] font-medium tracking-tight">
+      <ul class="list-disc flex flex-col pl-5 gap-2 text-sm sm:text-base text-[#828282] font-medium tracking-tight">
         <li *ngFor="let p of detail.points">
           {{ p }}
         </li>
@@ -40,7 +40,7 @@
     </button>
 
    </div>
-  <hr class=" border border-[#E0E0E0]" />
+  <hr class="border border-[#E0E0E0] dark:border-[#282828]" />
   <app-connect></app-connect>
   <app-follow-block></app-follow-block>
 </div>
