@@ -1,0 +1,17 @@
+<div class="bg-[#F0F0F0] rounded-[10px] p-5 flex flex-col gap-4">
+  <!-- Title -->
+  <div class="flex flex-row gap-2 items-center">
+    <div class="bg-[#ADADAD] w-2 h-2 rounded-full"></div>
+    <h1 class="text-[#5B5B5B] font-medium text-lg">Skills</h1>
+  </div>
+
+  <!-- Skills list -->
+  <div class="flex flex-wrap gap-3">
+    <span
+      *ngFor="let skill of skills"
+      class="px-3 py-1 text-sm bg-white rounded-full border border-[#E0E0E0] shadow-[0px_1px_2px_rgba(0,0,0,0.05)]"
+    >
+      {{ skill }}
+    </span>
+  </div>
+</div>

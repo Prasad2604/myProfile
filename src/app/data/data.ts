@@ -94,12 +94,20 @@ experience: [
   }
 ],
 
-  skills: {
-    fundamentals: ["DSA", "OOP", "DBMS", "OS", "CNS"],
-    languages: ["Python", "C++", "JavaScript", "SQL"],
-    databases: ["MySQL", "MongoDB"],
-    technologies: ["React.js", "Node.js", "Express.js", "Bootstrap", "HTML5", "CSS3"]
-  },
+  skills: [
+  "React.js",
+  "Express.js",
+  "Next.js",
+  "Docker",
+  "SQL",
+  "MongoDB",
+  "C++",
+  "Java",
+  "Jest",
+  "Git",
+  "Javascript",
+  "Azure"
+  ],
 
   achievements: [
     "Specialist on Codeforces (1567 max rating)",
@@ -137,7 +145,7 @@ experience: [
   {
     name: "CodeChef",
     icon: "../../assets/icons/codechef.jpg",
-    url: "https://www.codechef.com/users/prasad0409s"
+    url: "https://www.codechef.com/users/prasad0409"
   },
   {
     name: "Codeforces",
