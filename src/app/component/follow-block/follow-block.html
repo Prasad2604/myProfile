@@ -1,15 +1,16 @@
-<div class="bg-[#F0F0F0] rounded-[10px] flex flex-row pt-7 pb-7 pl-5 pr-5 justify-between">
+<div class="bg-[#F0F0F0] dark:bg-[#373737] rounded-[10px] flex flex-row pt-7 pb-7 pl-5 pr-5 justify-between">
   <div class="flex flex-row gap-2 items-center">
     <div class="bg-[#ADADAD] w-2 h-2 rounded-full"></div>
-    <h1 class="text-[#5B5B5B] font-medium text-lg">Socials</h1>
+    <h1 class="text-[#828282] font-medium text-lg">Socials</h1>
   </div>
 
-  <div class="flex flex-row gap-3">
+  <div class="flex flex-row gap-1 sm:gap-3 items-center">
     <ng-container *ngFor="let s of socials">
       <img
         [src]="s.icon"
         [alt]="s.name"
-        class="w-9 h-9 transition-all duration-500 hover:shadow-[0_0_0_5px_rgba(210,210,210,1)] rounded-full cursor-pointer"
+        class="w-5 h-5 sm:w-8 sm:h-8 transition-shadow duration-500 hover:shadow-[0_0_0_5px_rgba(210,210,210,1)] 
+        dark:hover:shadow-[0_0_0_5px_rgba(80,80,80,1)] rounded-full cursor-pointer"
         (click)="open(s.url)"
       />
     </ng-container>

@@ -1,18 +1,20 @@
 <div
-  class="bg-white flex flex-row p-3 rounded-[10px] items-center gap-4 w-full lg:w-[485px] transition-all duration-500 hover:shadow-[0_0_0_5px_rgba(210,210,210,1)] cursor-pointer"
+  class="bg-white dark:bg-[#373737] flex flex-row p-3 rounded-[10px] items-center gap-4 w-full 
+  lg:w-[485px] transition-shadow duration-500 hover:shadow-[0_0_0_5px_rgba(210,210,210,1)] cursor-pointer
+  dark:border dark:border-[#474747] dark:hover:shadow-[0_0_0_5px_rgba(80,80,80,1)]"
   (click)="openDetails()"
 >
   <!-- Left circle -->
   <div
-    class="lg:w-14 lg:h-14 h-11 w-11 flex items-center justify-center rounded-full bg-[linear-gradient(to_bottom,#eaeaea80,#f6f6f680,#eaeaea80)] border border-[#E0E0E0] shrink-0"
+    class="lg:w-14 lg:h-14 h-11 w-11 flex items-center justify-center rounded-full dark:bg-[linear-gradient(to_bottom,#1a1a1a80,#11111180,#1a1a1a80)] border border-[#E0E0E0] dark:border-[#282828] shrink-0"
   >
     <img [src]="logo" class="lg:w-9 lg:h-9 w-6 h-6" />
   </div>
 
   <!-- Middle text -->
-  <div class="flex flex-col w-full gap-1">
+  <div class="flex flex-col w-full gap-1 p-2">
     <h1 class="text-lg font-medium leading-tight">{{ title }}</h1>
-    <h1 class="text-sm lg:text-lg font-normal text-[#5B5B5B] leading-tight">
+    <h1 class="text-sm lg:text-lg font-normal text-[#828282] leading-tight">
       {{ stack }}
     </h1>
   </div>
