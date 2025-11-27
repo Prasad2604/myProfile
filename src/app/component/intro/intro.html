@@ -1,61 +1,59 @@
 <div class="flex flex-col gap-6 p-4">
+  <!-- Top row -->
+  <div class="flex flex-row sm:flex-row justify-between sm:items-center gap-4 sm:text-left">
+    <!-- Left -->
+    <div class="flex flex-row items-center gap-2 justify-start sm:justify-start">
+      <div class="bg-[#ADADAD] w-2 h-2 rounded-full"></div>
+      <h1 class="text-[#5B5B5B] font-medium text-sm sm:text-base">
+        {{ data.title }}
+      </h1>
+    </div>
 
-    <!-- Top row (unchanged desktop, centered mobile) -->
-    <div class="flex flex-row sm:flex-row justify-between sm:items-center gap-4 sm:text-left">
+    <!-- Right -->
+    <div
+      *ngIf="data.isAvailable"
+      class="bg-[#C4FFC180] flex items-center gap-1 px-2 py-1 rounded-2xl sm:justify-start sm:mx-0"
+    >
+      <div class="bg-[#03AD00] w-2 h-2 rounded-full"></div>
+      <h3 class="text-[#03AD00] font-semibold text-[10px] sm:text-xs">AVAILABLE FOR WORK</h3>
+    </div>
+  </div>
 
-        <!-- Left -->
-        <div class="flex flex-row items-center gap-2 justify-start sm:justify-start">
-            <div class="bg-[#ADADAD] w-2 h-2 rounded-4xl"></div>
-            <h1 class="text-[#5B5B5B] font-medium text-sm sm:text-base">
-                Software Engineer
-            </h1>
-        </div>
-
-        <!-- Right -->
+  <!-- Middle section -->
+  <div
+    class="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center sm:items-start text-center sm:text-left"
+  >
+    <!-- Image -->
+    <div class="order-1 sm:order-2 flex justify-center items-center">
+      <div
+        class="flex w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-[#F3F3F3] rounded-full justify-center items-center"
+      >
         <div
-            class="bg-[#C4FFC180] flex items-center gap-1 px-2 py-1 rounded-2xl sm:justify-start sm:mx-0">
-            <div class="bg-[#03AD00] w-2 h-2 rounded-4xl"></div>
-            <h3 class="text-[#03AD00] font-semibold text-[10px] sm:text-xs">
-                AVAILABLE FOR WORK
-            </h3>
+          class="flex w-24 h-24 sm:w-28 sm:h-28 lg:w-35 lg:h-35 bg-[#D9D9D9] rounded-full justify-center items-center"
+        >
+          <img [src]="data.memojiImage" class="w-16 h-20 sm:w-auto sm:h-auto" />
         </div>
-
+      </div>
     </div>
 
-    <!-- Middle section -->
-    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center sm:items-start text-center sm:text-left">
+    <!-- Text -->
+    <div class="order-2 sm:order-1 flex flex-col gap-4 flex-1 min-w-[180px]">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl sm:text-3xl font-medium">I'm {{ data.name }}</h1>
 
-        <!-- Image FIRST on mobile -->
-        <div class="order-1 sm:order-2 flex justify-center items-center">
-            <div
-                class="flex w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-[#F3F3F3] rounded-full justify-center items-center">
-                <div
-                    class="flex w-24 h-24 sm:w-28 sm:h-28 lg:w-35 lg:h-35 bg-[#D9D9D9] rounded-full justify-center items-center">
-                    <img src="../../../assets/icons/memoji.png" class="w-16 h-20 sm:w-auto sm:h-auto">
-                </div>
-            </div>
-        </div>
+        <p
+          class="text-[#828282] text-sm sm:text-base leading-[22px] sm:leading-[25px] font-extralight"
+        >
+          {{ data.title }} From {{ data.location }} <br />
+          {{ data.tagline }}
+        </p>
+      </div>
 
-        <!-- Intro div SECOND on mobile -->
-        <div class="order-2 sm:order-1 flex flex-col gap-4 flex-1 min-w-[180px]">
-
-            <div class="flex flex-col gap-2">
-                <h1 class="text-2xl sm:text-3xl font-medium">I'm Kunal S</h1>
-
-                <p class="text-[#828282] text-sm sm:text-base leading-[22px] sm:leading-[25px] font-extralight">
-                    Software Engineer From Pune, IND <br />
-                    Building reliable and efficient software.
-                </p>
-            </div>
-
-            <!-- Buttons -->
-            <div class="flex flex-row gap-2 justify-center sm:justify-start">
-                <app-button></app-button>
-                <app-email-button></app-email-button>
-            </div>
-
-        </div>
-
+      <!-- Buttons -->
+      <div class="flex flex-row gap-2 justify-center sm:justify-start">
+        <app-button></app-button>
+        <app-email-button></app-email-button>
+      </div>
     </div>
-
+  </div>
 </div>

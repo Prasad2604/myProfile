@@ -1,15 +1,18 @@
 <div class="bg-[#f0f0f0] rounded-[10px] p-5 w-full lg:w-[529px] flex flex-col gap-4">
-    <div class="flex flex-row gap-2 items-center">
-        <div class="bg-[#ADADAD] w-2 h-2 rounded-4xl"></div>
-        <h1 class="text-[#5B5B5B] font-medium text-lg">Experience</h1>
-    </div>
-    <div class="flex flex-col gap-5">
-        <app-list-block [title]="'Frontend Dev Intern'" [stack]="'Divegen Technologies'"
-            [logo]="'../../../assets/icons/divegen.png'"
-            [link]="'https://www.divegentechnologies.com/'">
-        </app-list-block>
-        <app-list-block [title]="'Robotics Design Head'" [stack]="'PICT Robotics'"
-            [logo]="'../../../assets/icons/robotics.png'" [link]="'https://www.linkedin.com/company/pictrobotics/posts/?feedView=all'">
-        </app-list-block>
-    </div>
+  <div class="flex flex-row gap-2 items-center">
+    <div class="bg-[#ADADAD] w-2 h-2 rounded-full"></div>
+    <h1 class="text-[#5B5B5B] font-medium text-lg">Experience</h1>
+  </div>
+
+  <div class="flex flex-col gap-5">
+    <app-list-block
+      *ngFor="let e of experience"
+      [id]="e.id"
+      [title]="e.role"
+      [stack]="e.company"
+      [logo]="e.logo"
+      [link]="e.link"
+    >
+    </app-list-block>
+  </div>
 </div>
