@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PORTFOLIO_DATA } from '../../data/data';
 
 @Component({
   selector: 'app-follow-block',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './follow-block.html',
   styleUrl: './follow-block.css',
 })
 export class FollowBlock {
-  instagram = PORTFOLIO_DATA.personal.instagram;
-  twitter = PORTFOLIO_DATA.personal.twitter;
-  linkedin = PORTFOLIO_DATA.personal.linkedin;
+  socials = PORTFOLIO_DATA.socials;
 
   open(url: string) {
     window.open(url, "_blank");
